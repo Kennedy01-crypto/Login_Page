@@ -7,11 +7,16 @@ body{
     background-size: cover;
     background-position: center;
 }
+:root{
+    --basic-color: #ff7200;
+    --dark-color: #000;
+    --light-color: #fff;
+}
 .login{
     width: 330px;
-    height: 550px;
-    background: #000;
-    color: #fff;
+    height: 565px;
+    background: var(--dark-color);
+    color: var(--light-color);
     top: 50%;
     left: 50%;
     font-family: sans-serif;
@@ -27,8 +32,8 @@ h1{ margin: 0;
     text-align: center;
 }
 .login h1{
-    background: #ff7200;
-    color: #fff;
+    background: var(--basic-color);
+    color: var(--light-color);
     border-radius: 8px;
     padding: 8px;
     font-weight: bold;
@@ -36,9 +41,9 @@ h1{ margin: 0;
 .login input[type="text"]{
     width: 275px;
     background: transparent;
-    color: #fff;
+    color: var(--light-color);
     font-size: 18px;
-    border: 2px solid #ff7200;
+    border: 2px solid var(--basic-color);
     border-left: none;
     border-right: none;
     border-top: none;
@@ -50,9 +55,9 @@ h1{ margin: 0;
     width: 200px;
     height: 47px;
     background: transparent;
-    border: 2px solid #ff7200;
+    border: 2px solid var(--basic-color);
     border-radius: 24px;
-    color: #fff;
+    color:var(--light-color);
     font-size: 22px;
     padding: 8px;
     margin: 23px;
@@ -61,21 +66,33 @@ h1{ margin: 0;
 }
 
 .login input[type="submit"]:hover{
-    background: #ff7200;
-    color: #fff;
+    background: var(--basic-color);
+    color: var(--light-color);
     cursor: pointer;
 }
 .login a{
     cursor: pointer;
-    color: #ff7200;
+    color: var(--basic-color);
     text-decoration: none;
 }
 .login a:hover{
-    color: #fff;
+    color: var(--light-color);
 }
 .login .ground{
     text-align: center;
 }
 .login .ground .icon{
     font-size: 25px;
+    margin: 10px 0px;
+}
+.icon{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.icon a{
+    transition: 0.5s cubic-bezier(0.18,-0.47, 1, 1.84);
+}
+.icon a:hover{
+    transform: rotate(-25deg) scale(1.5);
 }
