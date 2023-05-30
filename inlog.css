@@ -81,3 +81,13 @@ h1{ margin: 0;
 .login .ground .icon{
     font-size: 25px;
 }
+
+@media (max-width: 768px){
+    body{
+        background-image: none;
+        background-color: #ccc;
+    }
+    .login{
+        box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.7);
+    }
+}
